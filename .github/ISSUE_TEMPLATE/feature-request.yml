@@ -1,0 +1,24 @@
+name: Đề xuất tính năng (Feature request)
+description: Ý tưởng giúp Ríu Rít tốt hơn, thêm app chat, thêm skin…
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Bạn đang gặp khó khăn gì?
+      placeholder: "Ví dụ: nhóm 200 người làm bong bóng kêu suốt."
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Bạn muốn Ríu Rít làm gì?
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Nguyên tắc của dự án
+      options:
+        - label: Tôi hiểu Ríu Rít chỉ dùng bản web chính thức của app chat, không dùng API không chính thức và không thu thập dữ liệu.
+          required: true

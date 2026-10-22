@@ -1,0 +1,41 @@
+name: Đếm tin sai / app chat lỗi (Unread count wrong / chat app broken)
+description: Một app chat không đếm đúng tin chưa đọc, không đăng nhập được hoặc hiện lỗi.
+labels: [adapter]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cảm ơn bạn! Trang chat hay đổi giao diện; báo cáo này giúp sửa selector nhanh (bản sửa có thể đến qua cập nhật selector, không cần cài lại).
+        **Đừng dán ảnh có nội dung chat riêng tư.** Che tên và tin nhắn trước khi gửi.
+  - type: dropdown
+    id: app
+    attributes:
+      label: App chat
+      options: [Zalo, Messenger, Telegram, WhatsApp, Discord, Slack, Microsoft Teams, Google Chat, Google Messages, Instagram, X, LinkedIn, Element, App tự thêm (custom)]
+    validations:
+      required: true
+  - type: dropdown
+    id: health
+    attributes:
+      label: Mục "Đếm tin chưa đọc" trong Cài đặt → Tài khoản hiện gì?
+      options: [Hoạt động tốt, Cần sửa, Theo tiêu đề tab, Chưa kiểm tra, Không xem được]
+  - type: textarea
+    id: what
+    attributes:
+      label: Chuyện gì xảy ra?
+      placeholder: "Ví dụ: có 3 tin mới nhưng bong bóng vẫn 0; hoặc trang báo 'trình duyệt không được hỗ trợ'."
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Phiên bản Ríu Rít và hệ điều hành
+      placeholder: 0.2.0, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: html
+    attributes:
+      label: (Nếu biết) Đoạn HTML quanh badge tin chưa đọc
+      description: Chuột phải vào badge trong Chrome → Inspect → Copy element. Xoá tên người và nội dung tin trước khi dán.
+      render: html

@@ -1,0 +1,36 @@
+name: Báo lỗi (Bug report)
+description: Ríu Rít chạy sai, treo, tốn RAM bất thường…
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Lỗi bảo mật? **Đừng mở issue công khai**, hãy nhắn riêng cho NVMA qua Telegram https://t.me/NVMAsite.
+        Lỗi đếm tin của một app chat cụ thể: dùng mẫu "Đếm tin sai / app chat lỗi".
+  - type: textarea
+    id: what
+    attributes:
+      label: Chuyện gì xảy ra?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Cách tái hiện
+      placeholder: |
+        1. Thêm 2 tài khoản Zalo
+        2. Bấm Ctrl+Shift+Space
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Bạn mong đợi điều gì?
+  - type: input
+    id: version
+    attributes:
+      label: Phiên bản Ríu Rít và hệ điều hành
+      placeholder: 0.2.0, Windows 11 23H2
+    validations:
+      required: true
